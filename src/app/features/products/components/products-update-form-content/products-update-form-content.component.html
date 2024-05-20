@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="page-title">Ürün Güncelle</h4>
+
+      </div>
+      <div class="card-body">
+
+        <form [formGroup]="productFormGroup" (submit)="updateForm()" >
+
+          <label>Ürün</label>
+          <input type="text"  class="form-control" formControlName="name" />
+          <br />
+
+          <label>Kategori Adı</label>
+          <input type="text"  class="form-control" formControlName="categoryId" />
+          <br />
+
+          <label>Birim Fiyat</label>
+          <input type="text"  class="form-control" formControlName="unitPrice" />
+          <br />
+
+          <label>Stok</label>
+          <input type="text"  class="form-control" formControlName="unitsInStock" />
+          <br />
+
+
+
+          <button type="submit" class="btn btn-warning" style="color: white;" >Güncelle</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</div>

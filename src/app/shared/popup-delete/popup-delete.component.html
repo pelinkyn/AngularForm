@@ -1,0 +1,9 @@
+
+<div class="popup-container">
+  <h2 mat-dialog-title class="text">{{data.baslik}}</h2>
+<p mat-dialog-content class="text">{{data.message}}</p>
+<div mat-dialog-actions class="buttons d-flex justify-content-end">
+  <button class="btn btn-success m-2" mat-buttton (click)="onYesClick()">Onayla</button>
+  <button class="btn btn-danger m-2" mat-button (click)="onNoClick()">İptal</button>
+</div>
+</div>

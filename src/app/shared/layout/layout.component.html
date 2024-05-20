@@ -1,0 +1,38 @@
+<!-- <div class="row">
+  <div class="m-3 col-2">
+    <h2>Angular </h2>
+    <p></p>
+    <ul class="nav flex-column">
+      <li class="nav-item">
+        <a class="nav-link" href="/categories">Kategori</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/products">Ürün</a>
+      </li>
+    </ul>
+  </div>
+  <div class="col-9 m-3">
+    <ng-content></ng-content>
+  </div>
+</div> -->
+
+<div class="d-flex h-100" id="wrapper">
+  <!-- Sidebar -->
+  <div class="bg-light border-end col-2 h-100" id="sidebar-wrapper">
+    <div class="sidebar-heading p-3"></div>
+    <div class="list-group list-group-flush">
+      <a href="/" class="list-group-item list-group-item-action bg-light">Anasayfa</a>
+      <a href="/categories" class="list-group-item list-group-item-action bg-light">Kategori</a>
+      <a href="/products" class="list-group-item list-group-item-action bg-light">Ürün</a>
+
+    </div>
+  </div>
+  <!-- /#sidebar-wrapper -->
+
+  <!-- Page Content -->
+  <div id="page-content-wrapper" class="col-10">
+      <ng-content></ng-content>
+  </div>
+  <!-- /#page-content-wrapper -->
+</div>
+<!-- /#wrapper -->

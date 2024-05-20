@@ -1,0 +1,24 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="page-title">Kategori Bilgisi Ekle</h4>
+      </div>
+      <div class="card-body">
+
+        <form [formGroup]="categoryFormGroup" (submit)="addedForm()">
+
+          <label>Kategori</label>
+          <input type="text" class="form-control" formControlName="name" />
+          <br />
+
+          <label>Açıklama</label>
+          <input type="text" class="form-control" formControlName="description" />
+          <br />
+
+          <button class="btn btn-success">Ekle</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

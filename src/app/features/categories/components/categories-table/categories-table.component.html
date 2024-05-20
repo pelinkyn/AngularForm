@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title d-flex justify-content-between">
+       <h4 class="page-title">Kategori Listesi</h4>
+
+          <a routerLink="/categories/add" class="btn btn-success float">Kategori Ekle</a>
+        </div>
+      </div>
+      <div class="card-body">
+
+        <table class="table mt-3">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Kategori</th>
+              <th scope="col">Açıklama</th>
+              <th scope="col"></th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+          @for (item of categoryList;track $index )
+            {
+              <tr>
+                <td>{{item.id}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.description}}</td>
+                <td><a (click)="showDeletePopup(item.id!)" class="btn btn-danger">Sil</a></td>
+                <td><a [routerLink]="['/categories/update/',item.id]" class="btn btn-warning text-white">Güncelle</a></td>
+              </tr>
+            }
+
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+</div>
